@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<element>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         id="WebApp_ID" version="6.0">
+  
+  <display-name>MegaCityCab</display-name>
+  
+  <!-- Welcome file list -->
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+  </welcome-file-list>
+
+<servlet>
+    <servlet-name>RegisterServlet</servlet-name>
+    <servlet-class>controller.RegisterServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>RegisterServlet</servlet-name>
+    <url-pattern>/registerServlet</url-pattern>
+</servlet-mapping>
+
+
+  <!-- LoginServlet Mapping -->
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>controller.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/Loginservlet</url-pattern>
+  </servlet-mapping>
+
+<!-- BookingServlet Mapping -->
+<servlet>
+    <servlet-name>BookingServlet</servlet-name>
+    <servlet-class>controller.BookingServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>BookingServlet</servlet-name>
+    <url-pattern>/BookingServlet</url-pattern>
+</servlet-mapping>
+
+
+  <!-- CustomerRegisterServlet Mapping -->
+  <servlet>
+    <servlet-name>CustomerRegisterServlet</servlet-name>
+    <servlet-class>controller.CustomerRegisterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CustomerRegisterServlet</servlet-name>
+    <url-pattern>/CustomerRegisterServlet</url-pattern>
+  </servlet-mapping>
+
+ <session-config>
+    <session-timeout>20</session-timeout> <!-- Time in minutes -->
+</session-config>
+
+</web-app>
+</element>
