@@ -16,11 +16,13 @@
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password" required>
             </div>
+            
             <button type="submit" class="login-btn">Login</button>
             
             <% if (request.getParameter("error") != null) { %>
             <p style="color:red;">${param.error}</p>
         <% } %>
+        
         <a href="register.jsp" class="register-link">Don't have an account? Register</a>
     </div>
     </form>

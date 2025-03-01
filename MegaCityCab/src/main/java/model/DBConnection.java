@@ -9,7 +9,7 @@ public class DBConnection {
     // Database credentials
     private static final String URL = "jdbc:mysql://localhost:3306/MegaCityCab?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC";
     private static final String USER = "root";  // MySQL Username
-    private static final String PASSWORD = "kavindu"; // MySQL Password
+    private static final String PASSWORD = "12345678"; // MySQL Password
 
     // Singleton connection instance
     private static Connection conn = null;
