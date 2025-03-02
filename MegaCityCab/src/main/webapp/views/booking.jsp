@@ -81,6 +81,7 @@
                 <input type="text" id="fare" name="fare" readonly>
             </div>
             <button type="submit" class="btn">Book Now</button>
+            <button type="button"class="btn" onclick="window.location.href='homedashboard.jsp'">Back</button>
         </form>
     </div>
 </body>

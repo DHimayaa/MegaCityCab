@@ -61,5 +61,6 @@
     </table>
     </div>
     <% } %>
+    <button type="button" onclick="window.location.href='homedashboard.jsp'">Back</button>
 </body>
 </html>
