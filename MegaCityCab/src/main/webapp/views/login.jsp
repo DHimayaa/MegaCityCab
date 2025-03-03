@@ -5,9 +5,9 @@
 </head>
 <link rel="stylesheet" href="../css/login.css">
 <body>
-<form action="/MegaCityCab/Loginservlet" method="post">
     <div class="login-container">
         <h2>Login</h2>
+        <form action="/MegaCityCab/Loginservlet" method="post">
             <div class="input-group">
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username" required>
@@ -16,15 +16,14 @@
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password" required>
             </div>
-            
             <button type="submit" class="login-btn">Login</button>
             
-            <% if (request.getParameter("error") != null) { %>
+             <% if (request.getParameter("error") != null) { %>
             <p style="color:red;">${param.error}</p>
         <% } %>
         
-        <a href="register.jsp" class="register-link">Don't have an account? Register</a>
+        </form>
+        <p class="register-link">Don't have an account? <a href="register.jsp">Register</a></p>
     </div>
-    </form>
 </body>
 </html>
