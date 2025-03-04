@@ -1,0 +1,76 @@
+@charset "UTF-8";
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #292929; /* Dark background */
+    color: #ffffff; /* White text */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Heading */
+h2 {
+    color: #ffffff;
+    font-size: 36px;
+    margin-top: 50px;
+}
+
+/* Table Styling */
+table {
+    width: 80%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    background-color: #20515d; /* Dark teal background for table */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Header */
+th {
+    color: #ffffff;
+    font-size: 18px;
+    padding: 12px;
+    background-color: #2f7585; /* Lighter teal color for table header */
+}
+
+/* Table Data */
+td {
+    color: #8d8d8d; /* Light grey color for table data */
+    padding: 12px;
+    font-size: 16px;
+    text-align: center;
+    border-bottom: 1px solid #2f7585; /* Lighter teal border for rows */
+}
+
+/* Actions Column */
+td a {
+    color: #ffffff;
+    background-color: #20515d;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+td a:hover {
+    background-color: #2f7585; /* Lighter teal on hover */
+}
+
+/* No Actions Text */
+td {
+    color: #8d8d8d;
+    font-style: italic;
+}
+
+/* No Bookings Found Text */
+p {
+    color: #8d8d8d;
+    font-size: 18px;
+}
+
+/* Add some space between the table and the page */
+table, p {
+    margin-bottom: 30px;
+}
