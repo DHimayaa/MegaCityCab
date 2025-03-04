@@ -19,6 +19,7 @@
         }
     %>
 
+    
     <h1>Hello!! <%= user.getUsername() %>!</h1> <!-- Display the logged-in user's username -->
     <p>Welcome to your Dashboard</p>
     
@@ -26,13 +27,13 @@
     <div class="dashboard-container">
         <div class="box">
             <h2>Book a Ride</h2>
-            <p>Book your ride from here.</p>
+            <p>Request a cab instantly with your preferred options</p>
             <a href="booking.jsp">
             <button class="btn">Go to Booking</button> </a>
         </div>
         <div class="box">
-            <h2>Your Past Bookings</h2>
-            <p>View your previous ride bookings</p>
+            <h2>Previous Bookings</h2>
+            <p>View and manage your past ride details</p>
             <a href="viewbookings.jsp">
             <button class="btn">Go to Your Bookings</button> </a>
         </div>
