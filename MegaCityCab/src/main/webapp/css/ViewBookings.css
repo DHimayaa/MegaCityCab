@@ -1,0 +1,137 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url(../images/bg.jpg) no-repeat center center/cover;
+    backdrop-filter: blur(5px);
+    text-align: center;
+}
+
+/* Container Styling */
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 900px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 97%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: scale(1.02);
+}
+
+h2 {
+    font-size: 26px;
+    color: #ff416c;
+    margin-bottom: 15px;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-size: 16px;
+}
+
+th {
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    color: white;
+    font-weight: bold;
+}
+
+td {
+    background: rgba(255, 255, 255, 0.8);
+    color: #000;
+}
+
+/* Status Styling */
+.status {
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.status.completed {
+    background: #28a745;
+    color: white;
+}
+
+.status.pending {
+    background: #ffc107;
+    color: white;
+}
+
+.status.cancelled {
+    background: #dc3545;
+    color: white;
+}
+
+/* Action Buttons */
+.action-btn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    margin: 3px;
+}
+
+.edit {
+    background: #007bff;
+    color: white;
+}
+
+.edit:hover {
+    background: #0056b3;
+}
+
+.delete {
+    background: #dc3545;
+    color: white;
+}
+
+.delete:hover {
+    background: #a71d2a;
+}
+
+/* Back Button */
+.back-btn {
+    padding: 12px 20px;
+    background: linear-gradient(to right, #000000, #434343);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    margin-top: 15px;
+}
+
+.back-btn:hover {
+    background: linear-gradient(to right, #434343, #000000);
+    transform: translateY(-2px);
+}
