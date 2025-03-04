@@ -40,7 +40,7 @@
             
             <button type="submit" class="register-btn">Register</button>
         </form>
-        <a href="login.jsp" class="login-link">Already have an account? Login</a>
+        <p class="login-link">Already have an account? <a href="login.jsp">Login</a></p>
     </div>
 </body>
 </html>
