@@ -13,7 +13,7 @@ body {
     align-items: center;
     height: 100vh;
     background: url(../images/bg.jpg) no-repeat center center/cover;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(4px);
 }
 
 /* Container Styling */
