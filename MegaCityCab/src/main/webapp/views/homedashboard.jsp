@@ -34,7 +34,7 @@
         <div class="box">
             <h2>Previous Bookings</h2>
             <p>View and manage your past ride details</p>
-            <a href="viewbookings.jsp">
+            <a href="ViewMyBookings.jsp">
             <button class="btn">Go to Your Bookings</button> </a>
         </div>
     </div>
