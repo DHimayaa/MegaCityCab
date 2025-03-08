@@ -13,7 +13,7 @@
         <div class="box">
             <h2>Bookings Management</h2>
             <p>Efficiently manage customer bookings, ensuring seamless trip coordination and satisfaction.</p>
-            <a href="viewBookings.jsp">
+            <a href="viewbookings.jsp">
             <button class="btn">View Bookings</button> </a>
         </div>
         

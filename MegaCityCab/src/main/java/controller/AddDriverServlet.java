@@ -26,9 +26,9 @@ public class AddDriverServlet extends HttpServlet {
         boolean success = driverDAO.addDriver(new Driver(driverName, licenseNumber, phone));
 
         if (success) {
-            response.sendRedirect("view_drivers.jsp?message=Driver added successfully");
+            response.sendRedirect("/views/view_drivers.jsp?message=Driver added successfully");
         } else {
-            response.sendRedirect("add_driver.jsp?error=Failed to add driver");
+            response.sendRedirect("/views/add_driver.jsp?error=Failed to add driver");
         }
     }
 }
