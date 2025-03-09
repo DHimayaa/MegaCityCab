@@ -109,7 +109,7 @@ public class BookingDAO {
                     rs.getString("destination"),
                     rs.getDouble("fare"),
                     rs.getString("status"),
-                    null // You can set this to null if `booking_time` is not present
+                    null 
                 );
                 bookings.add(booking);
             }
@@ -154,5 +154,34 @@ public class BookingDAO {
 
         return bookings;
     }
+    
+    
+    public Booking getBookingById(int bookingId) {
+        String query = "SELECT * FROM bookings WHERE booking_id = ?";
+        try (Connection conn = DBConnection.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(query)) {
+
+            stmt.setInt(1, bookingId);
+            ResultSet rs = stmt.executeQuery();
+
+            if (rs.next()) {
+                // Create a booking object and return it
+                return new Booking(
+                    rs.getInt("booking_id"),
+                    rs.getString("customer_name"),
+                    rs.getString("pickup_location"),
+                    rs.getString("destination"),
+                    rs.getDouble("fare"),
+                    rs.getString("status"),
+                    null
+                );
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null; // Return null if no booking is found
+    }
+
+
 
 }

@@ -5,31 +5,64 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import model.Driver;
-
+import jakarta.servlet.http.HttpSession;
+import model.DBConnection;
+import model.User;
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
-import dao.DriverDAO;
-
-/**
- * Servlet implementation class AddDriverServlet
- */
 @WebServlet("/AddDriverServlet")
 public class AddDriverServlet extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String driverName = request.getParameter("driverName");
-        String licenseNumber = request.getParameter("licenseNumber");
+        // Retrieve driver details from form
+        String driverName = request.getParameter("driver_name");
+        String licenseNumber = request.getParameter("license_number");
         String phone = request.getParameter("phone");
+        String status = request.getParameter("status");
 
-        DriverDAO driverDAO = new DriverDAO();
-        boolean success = driverDAO.addDriver(new Driver(driverName, licenseNumber, phone));
+        // Get the user role from the session
+        HttpSession session = request.getSession();
+        User user = (User) session.getAttribute("user");  // Retrieve the User object from the session
 
-        if (success) {
-            response.sendRedirect("/views/view_drivers.jsp?message=Driver added successfully");
-        } else {
-            response.sendRedirect("/views/add_driver.jsp?error=Failed to add driver");
+        if (user == null) {
+            response.sendError(HttpServletResponse.SC_FORBIDDEN, "User not logged in.");
+            return;
+        }
+
+        String role = user.getRole(); // Get the role from the User object
+
+        // Query for adding the driver to the database
+        String query = "INSERT INTO drivers (driver_name, license_number, phone, status) VALUES (?, ?, ?, ?)";
+
+        try (Connection connection = DBConnection.getConnection();
+             PreparedStatement statement = connection.prepareStatement(query)) {
+
+            statement.setString(1, driverName);
+            statement.setString(2, licenseNumber);
+            statement.setString(3, phone);
+            statement.setString(4, status);
+
+            int rowsInserted = statement.executeUpdate();
+
+            // Redirect based on user role
+            if (rowsInserted > 0) {
+                if ("admin".equals(role)) {
+                    response.sendRedirect("/MegaCityCab/views/manageDrivers.jsp");
+                } else if ("manager".equals(role)) {
+                    response.sendRedirect("/MegaCityCab/views/view_drivers.jsp");
+                } else {
+                    response.sendError(HttpServletResponse.SC_FORBIDDEN, "Unauthorized access.");
+                }
+            } else {
+                response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Error adding driver.");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Database error.");
         }
     }
 }
-
