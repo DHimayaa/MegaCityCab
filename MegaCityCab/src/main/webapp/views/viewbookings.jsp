@@ -2,23 +2,18 @@
 <%@ page import="dao.BookingDAO" %>
 <%@ page import="java.util.List" %>
 <%@ page import="model.Booking" %>
-
 <html>
 <head>
     <title>View Bookings</title>
     <link rel="stylesheet" href="../css/ViewBookings.css">
 </head>
 <body>
-
     <div class="container">
         <h2>Customer Bookings</h2>
-    
-   
     <%
         // Retrieve all bookings
         BookingDAO bookingDAO = new BookingDAO();
         List<Booking> bookings = bookingDAO.getAllBookings();
-
         // Check if there are no bookings
         if (bookings.isEmpty()) {
     %>

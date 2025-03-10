@@ -11,10 +11,11 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: url(../images/bg.jpg) no-repeat center center/cover;
+    background: url('../images/bg.jpg') no-repeat center center fixed;
+    background-size: cover;
     backdrop-filter: blur(5px);
 }
-/* Container Styling */
+/* Main Container */
 .container {
     background: rgba(255, 255, 255, 0.9);
     padding: 30px;
@@ -33,94 +34,112 @@ body {
 h2 {
     font-size: 26px;
     color: #ff416c;
-    margin-bottom: 20px;
-}
-/* Message Styles */
-.info, .error {
-    font-size: 18px;
-    font-weight: bold;
-    padding: 10px;
     margin-bottom: 15px;
+}
+/* Form Container */
+.form-container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+h3 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
     border-radius: 5px;
 }
-.info {
-    background: #dff0d8;
-    color: #3c763d;
-}
-.error {
-    background: #f2dede;
-    color: #a94442;
-}
-/* Table Styling */
+
+/* Table Container */
 .table-container {
-    overflow-x: auto;
+    margin-top: 20px;
 }
+
 table {
     width: 100%;
     border-collapse: collapse;
-    background: white;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
-thead {
-    background: linear-gradient(to right, #ff416c, #ff4b2b);
-    color: white;
-}
+
 th, td {
     padding: 12px;
+    border: 1px solid #ddd;
     text-align: center;
-    border-bottom: 1px solid #ddd;
 }
-tbody tr:nth-child(even) {
-    background: #f9f9f9;
+
+th {
+    background: #ff416c;
+    color: white;
 }
-tbody tr:hover {
-    background: #f1f1f1;
-    transition: 0.3s;
+
+tr:nth-child(even) {
+    background: #f2f2f2;
 }
-/* Status Styling */
-.pending {
-    color: #ff9800;
-    font-weight: bold;
-}
-.completed {
-    color: #4caf50;
-    font-weight: bold;
-}
+
 /* Buttons */
 .btn {
     display: inline-block;
-    padding: 8px 12px;
+    padding: 10px;
     border: none;
     border-radius: 6px;
-    cursor: pointer;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: bold;
-    text-decoration: none;
-    margin: 5px;
+    cursor: pointer;
     transition: all 0.3s ease-in-out;
+    text-align: center;
+    margin-top: 10px;
+    text-decoration: none;
 }
-.complete {
-    background: #28a745;
+
+/* Primary Add Button */
+.primary-btn {
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
     color: white;
+    width: 100%;
 }
-.complete:hover {
-    background: #218838;
-    transform: scale(1.05);
+
+.primary-btn:hover {
+    background: linear-gradient(to right, #ff4b2b, #ff416c);
 }
-.cancel {
+
+/* Update Button */
+.update-btn {
+    background: #007BFF;
+    color: white;
+    padding: 8px 15px;
+}
+
+.update-btn:hover {
+    background: #0056b3;
+}
+
+/* Delete Button */
+.delete-btn {
     background: #dc3545;
     color: white;
+    padding: 8px 15px;
 }
-.cancel:hover {
+
+.delete-btn:hover {
     background: #c82333;
-    transform: scale(1.05);
 }
-.no-action {
-    color: #888;
-    font-style: italic;
-}
+
 /* Back Button */
 .back-btn {
     background: linear-gradient(to right, #000000, #434343);
@@ -129,6 +148,7 @@ tbody tr:hover {
     margin-top: 15px;
     padding: 12px;
 }
+
 .back-btn:hover {
     background: linear-gradient(to right, #434343, #000000);
     transform: translateY(-2px);

@@ -1,12 +1,10 @@
 @charset "UTF-8";
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
-
 body {
     display: flex;
     justify-content: center;
@@ -15,7 +13,6 @@ body {
     background: url(../images/bg.jpg) no-repeat center center/cover;
     backdrop-filter: blur(4px);
 }
-
 /* Container Styling */
 .container {
     background: rgba(255, 255, 255, 0.9);
@@ -28,23 +25,19 @@ body {
     text-align: center;
     transition: transform 0.3s ease-in-out;
 }
-
 .container:hover {
     transform: scale(1.02);
 }
-
 h1 {
     font-size: 26px;
     color: #ff416c;
     margin-bottom: 15px;
 }
-
 /* Form Styling */
 .form-group {
     margin-bottom: 15px;
     text-align: left;
 }
-
 label {
     display: block;
     font-size: 16px;
@@ -52,7 +45,6 @@ label {
     color: #333;
     margin-bottom: 5px;
 }
-
 select, input {
     width: 100%;
     padding: 10px;
@@ -61,12 +53,10 @@ select, input {
     font-size: 16px;
     background: rgba(255, 255, 255, 0.8);
 }
-
 input[readonly] {
     background: rgba(200, 200, 200, 0.5);
     cursor: not-allowed;
 }
-
 /* Buttons */
 .btn {
     width: 100%;
@@ -79,22 +69,18 @@ input[readonly] {
     transition: all 0.3s ease-in-out;
     margin-top: 10px;
 }
-
 .btn:first-of-type {
     background: linear-gradient(to right, #ff416c, #ff4b2b);
     color: white;
 }
-
 .btn:first-of-type:hover {
     background: linear-gradient(to right, #ff4b2b, #ff416c);
     transform: translateY(-2px);
 }
-
 .btn:last-of-type {
     background: linear-gradient(to right, #000000, #434343);
     color: white;
 }
-
 .btn:last-of-type:hover {
     background: linear-gradient(to right, #434343, #000000);
     transform: translateY(-2px);

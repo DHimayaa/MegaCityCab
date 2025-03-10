@@ -6,7 +6,6 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
-
 body {
     display: flex;
     justify-content: center;
@@ -15,7 +14,6 @@ body {
     background: url(../images/bg.jpg) no-repeat center center/cover;
     backdrop-filter: blur(5px);
 }
-
 /* Form Container */
 .container {
     background: rgba(255, 255, 255, 0.9);
@@ -28,23 +26,19 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.8);
     transition: transform 0.3s ease-in-out;
 }
-
 .container:hover {
     transform: scale(1.02);
 }
-
 h2 {
     font-size: 24px;
     color: #ff416c;
     margin-bottom: 20px;
 }
-
 /* Form Styles */
 form {
     display: flex;
     flex-direction: column;
 }
-
 div {
     margin-bottom: 15px;
 }
@@ -55,7 +49,6 @@ label {
     margin-bottom: 5px;
     color: #333;
 }
-
 input {
     width: 100%;
     padding: 10px;
@@ -63,7 +56,6 @@ input {
     border-radius: 6px;
     font-size: 16px;
 }
-
 /* Buttons */
 button {
     display: inline-block;
@@ -76,28 +68,23 @@ button {
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
-
 button[type="submit"] {
     background: linear-gradient(to right, #ff416c, #ff4b2b);
     color: white;
 }
-
 button[type="submit"]:hover {
     background: linear-gradient(to right, #ff4b2b, #ff416c);
     transform: scale(1.05);
 }
-
 button[type="button"] {
     background: linear-gradient(to right, #000000, #434343);
     color: white;
     margin-top: 10px;
 }
-
 button[type="button"]:hover {
     background: linear-gradient(to right, #434343, #000000);
     transform: scale(1.05);
 }
-
 /* Error Message */
 p {
     color: red;

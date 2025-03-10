@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="../css/add_car.css">
 </head>
 <body>
-    <<body>
+    <body>
     <div class="container">
         <div class="form-box">
             <h2>Add New Car</h2>
